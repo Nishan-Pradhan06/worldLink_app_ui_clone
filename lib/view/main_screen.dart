@@ -20,7 +20,7 @@ class _MainScreenState extends State<MainScreen> {
     const HomeScreen(),
     const HelpScreen(),
     const RouterScreen(),
-    const OffersScreen(),
+    OffersScreen(),
     const MenuScreen(),
   ];
 
