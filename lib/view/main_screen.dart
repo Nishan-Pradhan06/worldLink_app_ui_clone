@@ -40,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         onTap: _onItemTapped,
-        elevation: 4,
+        elevation: 2,
         backgroundColor: AppColor.secondary,
         selectedItemColor: AppColor.primary,
         unselectedItemColor: AppColor.tertiary,
