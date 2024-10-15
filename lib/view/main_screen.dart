@@ -5,7 +5,6 @@ import 'package:worldlink/view/screens/home_screen.dart';
 import 'package:worldlink/view/screens/menu_screen.dart';
 import 'package:worldlink/view/screens/offers_screen.dart';
 import 'package:worldlink/view/screens/router_screen.dart';
-import 'components/custom_appbar.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -34,7 +33,6 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppbar(),
       body: screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
