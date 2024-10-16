@@ -26,7 +26,7 @@ class RouterMenu extends StatelessWidget {
             BoxShadow(
               color: AppColor.primary.withOpacity(0.2),
               spreadRadius: 1,
-              blurRadius: 5,
+              blurRadius: 3,
             ),
           ],
         ),
