@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:worldlink/constants/theme.dart';
 import 'package:worldlink/view/components/appbar.dart';
 import 'package:worldlink/view/components/router_menu.dart';
+import 'package:worldlink/view/components/status.dart';
 
 class RouterScreen extends StatelessWidget {
   const RouterScreen({super.key});
@@ -20,23 +21,47 @@ class RouterScreen extends StatelessWidget {
             width: double.infinity,
             decoration: const BoxDecoration(color: AppColor.primary),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text('Online'),
-                    Text('Online'),
-                    Text('Online'),
-                  ],
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Status(
+                        icon: Icons.circle,
+                        color: Colors.green,
+                        title: 'Status:',
+                        subtitle: 'Online',
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Status(
+                        icon: Icons.access_time, // Icon for time or last online
+                        color: AppColor.primary,
+                        title: 'Last Online:',
+                        subtitle: '2024-Oct-14 07:08:37',
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Status(
+                        icon: Icons
+                            .network_check, // Icon representing network/signal level
+                        color: AppColor.primary,
+                        title: 'Optical Signal Level:',
+                        subtitle: '-20 dbm',
+                      ),
+                    ],
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 16.0),
                   child: Image.asset(
                     'assets/router.png',
-                    height: 210,
-                    width: 210,
+                    height: MediaQuery.of(context).size.height / 4,
+                    width: MediaQuery.of(context).size.width / 2.4,
                   ),
                 ),
               ],
