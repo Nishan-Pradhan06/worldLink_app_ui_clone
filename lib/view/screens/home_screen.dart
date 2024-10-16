@@ -5,7 +5,9 @@ import 'package:worldlink/view/components/internet_plan_card.dart';
 import 'package:worldlink/view/components/online_icon.dart';
 import 'package:worldlink/view/components/quick_menu.dart';
 import 'package:worldlink/view/components/subscription_text.dart';
+import '../../constants/banner_list.dart';
 import '../../constants/theme.dart';
+import '../components/offer.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -66,17 +68,17 @@ class HomeScreen extends StatelessWidget {
                 ),
                 child: ListView(
                   controller: scrollController,
-                  children: const [
-                    InternetPlanCard(),
-                    SubscriptionText(),
-                    SizedBox(
+                  children: [
+                    const InternetPlanCard(),
+                    const SubscriptionText(),
+                    const SizedBox(
                       height: 30,
                     ),
-                    Heading(title: 'Quick Menu'),
-                    SizedBox(
+                    const Heading(title: 'Quick Menu'),
+                    const SizedBox(
                       height: 20,
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 24.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -90,15 +92,31 @@ class HomeScreen extends StatelessWidget {
                             title: 'Chat\nWith Us',
                           ),
                           QuickMenu(
-                            icons: 'assets/icons/report.png', // Report Problem icon
+                            icons:
+                                'assets/icons/report.png', // Report Problem icon
                             title: 'Report\nProblem',
                           ),
                           QuickMenu(
-                            icons: 'assets/icons/mobile.png', // Connected Devices icon
+                            icons:
+                                'assets/icons/mobile.png', // Connected Devices icon
                             title: 'Connected\nDevices',
                           ),
                         ],
                       ),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    ListView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: offers.length,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(bottom: 24.0),
+                          child: OfferCard(imagePath: offers[index]),
+                        );
+                      },
                     ),
                   ],
                 ),
