@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:worldlink/view/components/offer.dart';
-import '../../constants/theme.dart';
 import '../components/appbar.dart';
 
 class OffersScreen extends StatelessWidget {
