@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:worldlink/view/components/offer.dart';
 import '../../constants/theme.dart';
+import '../components/appbar.dart';
 
 class OffersScreen extends StatelessWidget {
   OffersScreen({super.key});
@@ -16,20 +17,8 @@ class OffersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          height: 120,
-          width: double.infinity,
-          decoration: const BoxDecoration(color: AppColor.primary),
-          child: const Center(
-            child: Text(
-              'Offer',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-          ),
+        const MyAppBar(
+          title: 'Offer',
         ),
         Padding(
           padding: const EdgeInsets.only(top: 100),
