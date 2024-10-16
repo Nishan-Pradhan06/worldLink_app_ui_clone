@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:worldlink/constants/theme.dart';
+import 'package:worldlink/view/components/appbar.dart';
 import 'package:worldlink/view/components/help_list_card.dart';
 
 class HelpScreen extends StatelessWidget {
@@ -9,21 +9,7 @@ class HelpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          height: 120,
-          width: double.infinity,
-          decoration: const BoxDecoration(color: AppColor.primary),
-          child: const Center(
-            child: Text(
-              'Help',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-          ),
-        ),
+        const MyAppBar(title: 'Help'),
         Padding(
           padding: const EdgeInsets.only(top: 100),
           child: Container(
