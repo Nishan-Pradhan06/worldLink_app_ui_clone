@@ -5,11 +5,11 @@ import '../components/appbar.dart';
 class OffersScreen extends StatelessWidget {
   OffersScreen({super.key});
   final List<String> offerImages = [
-    'assets/banner.png',
-    'assets/banner.png',
-    'assets/banner.png',
-    'assets/banner.png',
-    'assets/banner.png',
+    'assets/banner/banner1.png',
+    'assets/banner/banner2.png',
+    'assets/banner/banner3.png',
+    'assets/banner/banner4.png',
+    'assets/banner/banner5.png',
   ];
 
   @override
