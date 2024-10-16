@@ -3,9 +3,12 @@ import '../../constants/theme.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
+  final double? height; // Add a height parameter
+
   const MyAppBar({
     super.key,
     required this.title,
+    this.height, // Default height
   });
 
   @override
@@ -22,9 +25,11 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ),
+      toolbarHeight: height, // Set the AppBar's height
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(150);
+  Size get preferredSize =>
+      Size.fromHeight(height!); // Use the height parameter
 }

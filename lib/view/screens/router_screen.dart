@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:worldlink/constants/theme.dart';
+import 'package:worldlink/view/components/appbar.dart';
 import 'package:worldlink/view/components/router_menu.dart';
 
 class RouterScreen extends StatelessWidget {
@@ -8,18 +9,9 @@ class RouterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColor.primary,
-        title: const Center(
-          child: Text(
-            'Router',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
-        ),
+      appBar: const MyAppBar(
+        title: 'Router',
+        height: 50,
       ),
       body: Stack(
         children: [
