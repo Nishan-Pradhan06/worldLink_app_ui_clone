@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:worldlink/view/components/custom_appbar.dart';
+import 'package:worldlink/view/components/heading.dart';
+import 'package:worldlink/view/components/internet_plan_card.dart';
 import 'package:worldlink/view/components/online_icon.dart';
+import 'package:worldlink/view/components/quick_menu.dart';
+import 'package:worldlink/view/components/subscription_text.dart';
 import '../../constants/theme.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,7 +17,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           // Additional header for online status and router image
           Positioned(
-            top: 90,
+            top: 78,
             left: 0,
             right: 0,
             child: Container(
@@ -25,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+                        EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
                     child: Text(
                       'Good Afternoon, sumitra96_fblbr',
                       style: TextStyle(
@@ -63,24 +67,44 @@ class HomeScreen extends StatelessWidget {
                 child: ListView(
                   controller: scrollController,
                   children: const [
-                    SizedBox(height: 20),
+                    InternetPlanCard(),
+                    SubscriptionText(),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Heading(title: 'Quick Menu'),
+                    SizedBox(
+                      height: 20,
+                    ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20.0),
-                      child: Text(
-                        'Settings',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
+                      padding: EdgeInsets.symmetric(horizontal: 24.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          QuickMenu(
+                            icons: 'assets/icons/wifi.png', // Wi-Fi icon
+                            title: 'Wi-Fi\nPassword',
+                          ),
+                          QuickMenu(
+                            icons: 'assets/icons/chat.png', // Chat icon
+                            title: 'Chat\nWith Us',
+                          ),
+                          QuickMenu(
+                            icons: 'assets/icons/report.png', // Report Problem icon
+                            title: 'Report\nProblem',
+                          ),
+                          QuickMenu(
+                            icons: 'assets/icons/mobile.png', // Connected Devices icon
+                            title: 'Connected\nDevices',
+                          ),
+                        ],
                       ),
                     ),
-                    SizedBox(height: 10),
                   ],
                 ),
               );
             },
           ),
-
           // Custom AppBar positioned at the top
           const Positioned(
             top: 0,
@@ -95,95 +119,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-  // child: Card(
-  //                 color: Colors.lightBlue[100],
-  //                 child: const Padding(
-  //                   padding: EdgeInsets.all(16.0),
-  //                   child: Column(
-  //                     crossAxisAlignment: CrossAxisAlignment.start,
-  //                     children: [
-  //                       Text(
-  //                         "My Internet Plan",
-  //                         style: TextStyle(
-  //                           fontSize: 18,
-  //                           fontWeight: FontWeight.bold,
-  //                         ),
-  //                       ),
-  //                       SizedBox(height: 10),
-  //                       Text(
-  //                         "98 Days left",
-  //                         style: TextStyle(fontSize: 16),
-  //                       ),
-  //                       SizedBox(height: 10),
-  //                       Text(
-  //                         "Special Offer 80Mbps/12mths(A) with Dual Band ONU",
-  //                       ),
-  //                     ],
-  //                   ),
-  //                 ),
-  //               ),
-
-
-  // Container(
-  //                 padding: const EdgeInsets.all(16),
-  //                 margin: const EdgeInsets.all(16),
-  //                 decoration: BoxDecoration(
-  //                   image: const DecorationImage(
-  //                     fit: BoxFit.cover,
-  //                     image: AssetImage(
-  //                       'assets/banner.png',
-  //                     ),
-  //                   ),
-  //                   color: Colors.blue[50],
-  //                   borderRadius: BorderRadius.circular(12),
-  //                 ),
-  //                 child: Row(
-  //                   mainAxisAlignment: MainAxisAlignment.center,
-  //                   crossAxisAlignment: CrossAxisAlignment.center,
-  //                   children: [
-  //                     const Column(
-  //                       children: [
-  //                         Text(
-  //                           'My Internet Plan',
-  //                           style: TextStyle(
-  //                             fontSize: 14,
-  //                           ),
-  //                         ),
-  //                         SizedBox(height: 10),
-  //                         Text(
-  //                           '98 Days left',
-  //                           style: TextStyle(
-  //                             fontSize: 16,
-  //                             color: Colors.black87,
-  //                             fontWeight: FontWeight.bold,
-  //                           ),
-  //                         ),
-  //                       ],
-  //                     ),
-  //                     const SizedBox(width: 15),
-  //                     Column(
-  //                       mainAxisAlignment: MainAxisAlignment.center,
-  //                       crossAxisAlignment: CrossAxisAlignment.center,
-  //                       children: [
-  //                         Center(
-  //                           child: Text(
-  //                             'Special Offer 80Mbps/\n12mths(A) with Dual Band ONU',
-  //                             style: TextStyle(
-  //                                 fontSize: 14, color: Colors.grey[700]),
-  //                           ),
-  //                         ),
-  //                         const SizedBox(height: 15),
-  //                         // LinearProgressIndicator(
-  //                         //   value: 0.5,
-  //                         //   backgroundColor: Colors.grey[300],
-  //                         //   valueColor: const AlwaysStoppedAnimation<Color>(
-  //                         //     Colors.blue,
-  //                         //   ),
-  //                         // ),
-  //                       ],
-  //                     ),
-  //                   ],
-  //                 ),
-  //               ),
