@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
             left: 0,
             right: 0,
             child: Container(
-              height: 100,
+              height: 120,
               width: double.infinity,
               decoration: const BoxDecoration(color: AppColor.primary),
               child: const Column(
