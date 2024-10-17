@@ -5,6 +5,9 @@ import 'package:worldlink/view/components/internet_plan_card.dart';
 import 'package:worldlink/view/components/online_icon.dart';
 import 'package:worldlink/view/components/quick_menu.dart';
 import 'package:worldlink/view/components/subscription_text.dart';
+import 'package:worldlink/view/screens/home/quickMenu/connected_devices.dart';
+import 'package:worldlink/view/screens/home/quickMenu/report_problem.dart';
+import 'package:worldlink/view/screens/home/quickMenu/wifi_password.dart';
 import '../../constants/banner_list.dart';
 import '../../constants/theme.dart';
 import '../components/offer.dart';
@@ -76,28 +79,50 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 24.0),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         QuickMenu(
                           icons: 'assets/icons/wifi.png', // Wi-Fi icon
                           title: 'Wi-Fi\nPassword',
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const WifiPassword(),
+                              ),
+                            );
+                          },
                         ),
                         QuickMenu(
                           icons: 'assets/icons/chat.png', // Chat icon
                           title: 'Chat\nWith Us',
+                          onTap: () {},
                         ),
                         QuickMenu(
                           icons:
                               'assets/icons/report.png', // Report Problem icon
                           title: 'Report\nProblem',
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const ReportProblem(),
+                              ),
+                            );
+                          },
                         ),
                         QuickMenu(
                           icons:
                               'assets/icons/mobile.png', // Connected Devices icon
                           title: 'Connected\nDevices',
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const ConnectedDevices(),
+                              ),
+                            );
+                          },
                         ),
                       ],
                     ),
