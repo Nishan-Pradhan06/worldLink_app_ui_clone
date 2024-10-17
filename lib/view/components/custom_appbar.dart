@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:worldlink/view/components/search_box.dart';
+import 'package:worldlink/view/screens/home/notification.dart';
 import 'package:worldlink/view/screens/home/profile_screen.dart';
 
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
@@ -34,7 +35,13 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
       title: const SearchBox(title: 'How can I help you?'),
       actions: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const NotificationScreen(),
+              ),
+            );
+          },
           icon: const Icon(Icons.notifications_active_outlined),
           color: Colors.white,
         ),
