@@ -4,18 +4,22 @@ import '../../constants/theme.dart';
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final double? height; // Add a height parameter
+  final Widget? leading; // Change icon to leading widget
 
   const MyAppBar({
     super.key,
     required this.title,
     this.height, // Default height
+    this.leading, // Allow for a leading widget (icon)
   });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      automaticallyImplyLeading: false,
       centerTitle: true,
       backgroundColor: AppColor.primary,
+      leading: leading, // Use the leading widget
       title: Text(
         title,
         style: const TextStyle(
@@ -29,6 +33,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize =>
-      Size.fromHeight(height!); // Use the height parameter
+  Size get preferredSize => Size.fromHeight(
+        height ?? kToolbarHeight,
+      );
 }
