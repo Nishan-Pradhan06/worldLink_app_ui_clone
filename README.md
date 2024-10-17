@@ -11,11 +11,8 @@ This project is a Flutter application that clones the UI design of the Worldlink
 
 ## Screenshots
 
-![Home Screen](assets/screenshots/home.jpg)
-![Help Screen](assets/screenshots/help.jpg)
-![Router Screen](assets/screenshots/router.jpg)
-![Offers Screen](assets/screenshots/offers.jpg)
-![Menu Screen](assets/screenshots/menu.jpg)
+![Screen](assets/screenshots/screenshots.png)
+![Screen](assets/screenshots/screenshot2.png)
 
 ## Technologies Used
 
