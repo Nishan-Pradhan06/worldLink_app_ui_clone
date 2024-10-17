@@ -5,12 +5,14 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final double? height; // Add a height parameter
   final Widget? leading; // Change icon to leading widget
+  final Widget? action; // Change icon to action widget
 
   const MyAppBar({
     super.key,
     required this.title,
     this.height, // Default height
     this.leading, // Allow for a leading widget (icon)
+    this.action, // Allow for an action widget (icon)
   });
 
   @override
@@ -28,6 +30,9 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: Colors.white,
         ),
       ),
+      actions: action != null
+          ? [action!]
+          : [], // Wrap action in a list if it's not null
       toolbarHeight: height, // Set the AppBar's height
     );
   }
