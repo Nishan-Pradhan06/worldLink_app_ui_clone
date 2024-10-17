@@ -11,11 +11,11 @@ This project is a Flutter application that clones the UI design of the Worldlink
 
 ## Screenshots
 
-![Home Screen](path/to/home_screen.png)
-![Help Screen](path/to/help_screen.png)
-![Router Screen](path/to/router_screen.png)
-![Offers Screen](path/to/offers_screen.png)
-![Menu Screen](path/to/menu_screen.png)
+![Home Screen](assets/screenshots/home.jpg)
+![Help Screen](assets/screenshots/help.jpg)
+![Router Screen](assets/screenshots/router.jpg)
+![Offers Screen](assets/screenshots/offers.jpg)
+![Menu Screen](assets/screenshots/menu.jpg)
 
 ## Technologies Used
 
@@ -30,3 +30,4 @@ Follow the steps below to set up the project on your PC:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Nishan-Pradhan06/worldLink_app_ui_clone
+   ```
