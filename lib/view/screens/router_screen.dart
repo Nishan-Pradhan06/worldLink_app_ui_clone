@@ -3,6 +3,8 @@ import 'package:worldlink/constants/theme.dart';
 import 'package:worldlink/view/components/appbar.dart';
 import 'package:worldlink/view/components/router_menu.dart';
 import 'package:worldlink/view/components/status.dart';
+import 'package:worldlink/view/screens/menu/connected_devices.dart';
+import 'package:worldlink/view/screens/router/restart_router.dart';
 
 class RouterScreen extends StatelessWidget {
   const RouterScreen({super.key});
@@ -87,11 +89,11 @@ class RouterScreen extends StatelessWidget {
                 child: ListView(
                   physics: const ScrollPhysics(parent: BouncingScrollPhysics()),
                   controller: scrollController,
-                  children: const [
-                    SizedBox(
+                  children: [
+                    const SizedBox(
                       height: 20,
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 20.0),
                       child: Text(
                         'Settings',
@@ -99,32 +101,50 @@ class RouterScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold, fontSize: 16),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     RouterMenu(
                       title: 'Wifi',
                       icon: Icons.wifi_outlined, // Use a "menu" icon
+                      onTap: () {},
                     ),
                     RouterMenu(
                       title: 'Connected Devices',
                       icon: Icons.devices_rounded, // Use a "devices" icon
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const ConnectedDevices(),
+                          ),
+                        );
+                      },
                     ),
                     RouterMenu(
                       title: 'Device Filtering',
                       icon: Icons.filter_list_rounded, // Use a "filter" icon
+                      onTap: () {},
                     ),
                     RouterMenu(
                       title: 'Restart Router',
                       icon: Icons.restart_alt_rounded, // Use a "restart" icon
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const RestartRouter(),
+                          ),
+                        );
+                      },
                     ),
                     RouterMenu(
                       title: 'Add-On Router',
                       icon: Icons.router_rounded, // Use a "router" icon
+                      onTap: () {},
                     ),
                     RouterMenu(
                       title: 'About Router',
                       icon: Icons.info_outline_rounded, // Use an "info" icon
+                      onTap: () {},
                     ),
                   ],
                 ),
