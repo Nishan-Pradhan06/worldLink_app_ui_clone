@@ -69,11 +69,7 @@ class HelpScreen extends StatelessWidget {
                   icon: Icons.phone_in_talk_rounded,
                   title: 'Contact Us',
                   onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const ContactUs(),
-                      ),
-                    );
+                    ContactUs.show(context);
                   },
                 ),
                 HelpListCard(
