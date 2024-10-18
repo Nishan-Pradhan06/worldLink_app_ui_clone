@@ -3,8 +3,8 @@ import 'package:worldlink/view/components/custom_back_button.dart';
 import 'package:worldlink/view/components/custom_button.dart';
 import 'package:worldlink/view/components/heading.dart';
 import 'package:worldlink/view/components/textfield.dart';
-import '../../../../constants/theme.dart';
-import '../../../components/appbar.dart';
+import '../../../constants/theme.dart';
+import '../../components/appbar.dart';
 
 class WifiPassword extends StatelessWidget {
   const WifiPassword({super.key});

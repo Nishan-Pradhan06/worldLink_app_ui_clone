@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:worldlink/view/components/appbar.dart';
 import 'package:worldlink/view/components/help_list_card.dart';
-import 'package:worldlink/view/screens/home/quickMenu/report_problem.dart';
+import 'package:worldlink/view/screens/help/contact_us.dart';
+import 'package:worldlink/view/screens/help/report_problem.dart';
 
 class HelpScreen extends StatelessWidget {
   const HelpScreen({super.key});
@@ -57,24 +58,12 @@ class HelpScreen extends StatelessWidget {
                 HelpListCard(
                   icon: Icons.receipt_long_rounded,
                   title: 'View your tickets',
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const ReportProblem(),
-                      ),
-                    );
-                  },
+                  onTap: () {},
                 ),
                 HelpListCard(
                   icon: Icons.location_on_rounded,
                   title: 'Locatoin Shift',
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const ReportProblem(),
-                      ),
-                    );
-                  },
+                  onTap: () {},
                 ),
                 HelpListCard(
                   icon: Icons.phone_in_talk_rounded,
@@ -82,7 +71,7 @@ class HelpScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const ReportProblem(),
+                        builder: (context) => const ContactUs(),
                       ),
                     );
                   },
@@ -90,35 +79,17 @@ class HelpScreen extends StatelessWidget {
                 HelpListCard(
                   icon: Icons.email_rounded,
                   title: 'Write us a mail',
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const ReportProblem(),
-                      ),
-                    );
-                  },
+                  onTap: () {},
                 ),
                 HelpListCard(
                   icon: Icons.chat_bubble_outline_rounded,
                   title: 'Chat With Us',
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const ReportProblem(),
-                      ),
-                    );
-                  },
+                  onTap: () {},
                 ),
                 HelpListCard(
                   icon: Icons.help_outline_rounded,
                   title: 'Read FAQs',
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const ReportProblem(),
-                      ),
-                    );
-                  },
+                  onTap: () {},
                 ),
               ],
             ),

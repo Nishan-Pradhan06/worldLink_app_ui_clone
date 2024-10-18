@@ -3,7 +3,7 @@ import 'package:worldlink/view/components/appbar.dart';
 import 'package:worldlink/view/components/heading.dart';
 import 'package:worldlink/view/components/router_menu.dart';
 import 'package:worldlink/view/components/search_box.dart';
-import 'package:worldlink/view/screens/home/quickMenu/connected_devices.dart';
+import 'package:worldlink/view/screens/menu/connected_devices.dart';
 import 'package:worldlink/view/screens/menu/language_screen.dart';
 
 class MenuScreen extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:worldlink/view/components/custom_back_button.dart';
-import '../../../../constants/theme.dart';
-import '../../../components/appbar.dart';
+import '../../../constants/theme.dart';
+import '../../components/appbar.dart';
 
 class ReportProblem extends StatelessWidget {
   const ReportProblem({super.key});

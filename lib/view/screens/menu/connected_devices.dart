@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:worldlink/constants/theme.dart';
 import 'package:worldlink/view/components/custom_back_button.dart';
-import '../../../components/appbar.dart';
+import '../../components/appbar.dart';
 
 class ConnectedDevices extends StatelessWidget {
   const ConnectedDevices({super.key});
