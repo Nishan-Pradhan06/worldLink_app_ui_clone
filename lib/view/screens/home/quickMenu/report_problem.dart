@@ -54,7 +54,10 @@ class ReportProblem extends StatelessWidget {
                   const CustomStartButton(),
                   const Spacer(),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                      vertical: 40,
+                    ),
                     child: Column(
                       children: [
                         const Text('You are diagnosing for username:'),
