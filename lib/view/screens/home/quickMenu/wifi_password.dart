@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:worldlink/view/components/custom_back_button.dart';
+import 'package:worldlink/view/components/custom_button.dart';
+import 'package:worldlink/view/components/heading.dart';
+import 'package:worldlink/view/components/textfield.dart';
 import '../../../../constants/theme.dart';
 import '../../../components/appbar.dart';
 
@@ -26,6 +29,56 @@ class WifiPassword extends StatelessWidget {
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
+              ),
+              child: ListView(
+                children: [
+                  const Heading(title: 'Password'),
+                  const SizedBox(height: 10),
+                  const Textfield(),
+                  const SizedBox(height: 8),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 40.0),
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        '12/16',
+                        style: TextStyle(fontSize: 12),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Text(
+                      'Suggest Strong Password',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: AppColor.primary,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: CustomButton(
+                      title: 'Change Password',
+                      onTap: () {},
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  GestureDetector(
+                    onTap: () {},
+                    child: const Center(
+                      child: Text(
+                        'View Wi-Fi QR code',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: AppColor.primary,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
