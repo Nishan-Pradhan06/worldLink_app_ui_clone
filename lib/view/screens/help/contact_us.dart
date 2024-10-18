@@ -203,12 +203,12 @@ class ContactWidget extends StatelessWidget {
           height: 40,
           width: 40,
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Text(
           contact,
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
       ],
     );
