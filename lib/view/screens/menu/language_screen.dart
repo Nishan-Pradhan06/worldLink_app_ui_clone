@@ -7,11 +7,10 @@ class LanguageScreen extends StatefulWidget {
   const LanguageScreen({super.key});
 
   @override
-  _LanguageScreenState createState() => _LanguageScreenState();
+  State<LanguageScreen> createState() => _LanguageScreenState();
 }
 
 class _LanguageScreenState extends State<LanguageScreen> {
-  // Variable to hold the selected language code
   String? _selectedLanguage;
 
   // List of languages
@@ -116,10 +115,10 @@ class _LanguageScreenState extends State<LanguageScreen> {
                         // Handle language change action here
                         if (_selectedLanguage != null) {
                           // You can implement the logic to change the app's language
-                          print('Language changed to: $_selectedLanguage');
+                          debugPrint('Language changed to: $_selectedLanguage');
                         } else {
                           // Handle case where no language is selected
-                          print('No language selected');
+                          debugPrint('No language selected');
                         }
                       },
                       child: Container(
