@@ -14,32 +14,40 @@ class OffersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        const MyAppBar(
-          title: 'Offer',
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 100),
-          child: Container(
-            width: double.infinity,
-            height: MediaQuery.of(context).size.height,
-            decoration: const BoxDecoration(
-              color: Colors.white, // Background color
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
+    return RefreshIndicator(
+      onRefresh: () async {
+        await Future.delayed(
+          const Duration(seconds: 1),
+        );
+      },
+      edgeOffset: 2.0,
+      child: Stack(
+        children: [
+          const MyAppBar(
+            title: 'Offer',
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 100),
+            child: Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height,
+              decoration: const BoxDecoration(
+                color: Colors.white, // Background color
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                ),
+              ),
+              child: ListView.builder(
+                itemCount: offerImages.length,
+                itemBuilder: (context, index) {
+                  return OfferCard(imagePath: offerImages[index]);
+                },
               ),
             ),
-            child: ListView.builder(
-              itemCount: offerImages.length,
-              itemBuilder: (context, index) {
-                return OfferCard(imagePath: offerImages[index]);
-              },
-            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
